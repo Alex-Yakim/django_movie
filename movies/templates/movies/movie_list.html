@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% block title %}Django movie{% endblock title %}
+{% block header %}bg1{% endblock header%}
+{% block image_style %}
+style="background-color: rgba(0, 0, 0, 0); margin-top: 0px; background-image: url(&quot;static/single-post-pic.jpg&quot;);"
+{% endblock image_style %}
+{% block content %}
+                    <div class="left-ads-display col-lg-9">
+                        <div class="row">
+                            {% for movie in movie_list %}
+                            <div class="col-md-4 product-men">
+                                <div class="product-shoe-info editContent text-center mt-lg-4" >
+                                    <div class="men-thumb-item">
+                                        <img src="{{ movie.poster.url }}" class="img-fluid" alt="" >
+                                    </div>
+                                    <div class="item-info-product">
+                                        <h4 class="">
+                                            <a href="{% url 'movie_detail' movie.url %}" class="editContent" >{{movie.title}}</a>
+                                        </h4>
+
+                                        <div class="product_price">
+                                            <div class="grid-price">
+                                                <span class="money editContent" >{{ movie.tagline }}</span>
+                                            </div>
+                                        </div>
+                                        <ul class="stars">Рейтинг - {{movie.get_rating}}
+                                            <!--<li><a href="#"><span class="fa fa-star" aria-hidden="true" ></span></a></li>
+                                            <li><a href="#"><span class="fa fa-star" aria-hidden="true" ></span></a></li>
+                                            <li><a href="#"><span class="fa fa-star-half-o" aria-hidden="true" ></span></a></li>
+                                            <li><a href="#"><span class="fa fa-star-half-o" aria-hidden="true" ></span></a></li>
+                                            <li><a href="#"><span class="fa fa-star-o" aria-hidden="true" ></span></a></li>-->
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                        <!--<div class="grid-img-right mt-4 text-right bg bg1" >
+                            <span class="money editContent" >Flat 50% Off</span>
+                            <a href="moviesingle.html" class="btn" >Now</a>
+                        </div>-->
+                    </div>
+
+{% endblock content %}

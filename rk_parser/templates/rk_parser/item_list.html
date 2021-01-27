@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% for prod in product %}
+{{prod}}
+{% endfor %}
+
+</body>
+</html>
+<ul>
+    <li><a href="{{prod.url}}">{{ prod.name }}</a> {{prod.article}} {{prod.price}} </li>
+</ul>
