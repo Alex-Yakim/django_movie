@@ -13,5 +13,5 @@ def get_categories():
 @register.inclusion_tag('movies/tags/lust_movie.html')
 def get_lust_movie():
     """Последние добавленные фильмы"""
-    movies = Movie.objects.order_by('id')[:5]
+    movies = Movie.objects.filter(draft=False).order_by('-id')[:5]
     return {'lust_movies': movies}

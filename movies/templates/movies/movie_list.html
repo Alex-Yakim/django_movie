@@ -2,7 +2,7 @@
 {% block title %}Django movie{% endblock title %}
 {% block header %}bg1{% endblock header%}
 {% block image_style %}
-style="background-color: rgba(0, 0, 0, 0); margin-top: 0px; background-image: url(&quot;static/single-post-pic.jpg&quot;);"
+style="background-color: rgba(0, 0, 0, 0); margin-top: 0px; background-image: url(&quot;/static/single-post-pic.jpg&quot;);"
 {% endblock image_style %}
 {% block content %}
                     <div class="left-ads-display col-lg-9">
@@ -35,10 +35,9 @@ style="background-color: rgba(0, 0, 0, 0); margin-top: 0px; background-image: ur
                             </div>
                             {% endfor %}
                         </div>
-                        <!--<div class="grid-img-right mt-4 text-right bg bg1" >
-                            <span class="money editContent" >Flat 50% Off</span>
-                            <a href="moviesingle.html" class="btn" >Now</a>
-                        </div>-->
+                        <div class="mt-4 text-right bg bg1">
+                            {% include 'include/pagination.html' %}
+                        </div>
                     </div>
 
 {% endblock content %}
