@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block title %}Актеры и режесеры - Django movie{% endblock title %}
+{% block header %}bg1 inner{% endblock header%}
+{% block image_style %}
+style="background-color: rgba(0, 0, 0, 0); margin-top: 0px; background-image: url(&quot;/static/single-post-pic.jpg&quot;);"
+{% endblock image_style %}
+{% block breadcrumbs %}Актеры{% endblock breadcrumbs %}
+
+{% block content %}
+<div class="left-ads-display col-lg-9">
+    <div class="row">
+        {% for actor in actor_list %}
+        <div class="col-md-4 product-men">
+            <div class="product-shoe-info editContent text-center mt-lg-4" >
+                <div class="men-thumb-item">
+                    <img src="{{ actor.image.url }}" class="img-fluid" alt="" >
+                </div>
+                <div class="item-info-product">
+                    <h4 class="">
+                        <a href="{% url 'actor_detail' actor.name %}" class="editContent" >{{actor.name}}</a>
+                    </h4>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    <div class="mt-4 text-right bg bg1">
+        {% include 'include/pagination.html' %}
+    </div>
+</div>
+{% endblock content %}
