@@ -1,7 +1,9 @@
 {% extends 'base.html' %}
 {% load static %}
-{% block title %}{{ movie.title }} - Django movie{% endblock title %}
+{% block title %}{{ actor.name }} - Django movie{% endblock title %}
 {% block header %}bg1 inner{% endblock header%}
+{% block breadcrumbs %}{{ actor.name }}{% endblock breadcrumbs %}
+
 {% block content %}
                 <!-- product right -->
 <div class="left-ads-display col-lg-8">

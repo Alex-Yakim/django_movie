@@ -2,6 +2,7 @@
 {% load static %}
 {% block title %}{{ movie.title }} - Django movie{% endblock title %}
 {% block header %}bg1 inner{% endblock header%}
+{% block breadcrumbs %}{{ movie.title }}{% endblock breadcrumbs %}
 {% block content %}
                 <!-- product right -->
                 <div class="left-ads-display col-lg-8">
