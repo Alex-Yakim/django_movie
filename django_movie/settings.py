@@ -24,7 +24,7 @@ SECRET_KEY = 'gln#n=tazfx#4l2hn#m!2^f)9#&i5wn2p^v3mpm389)2(5ua%q'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['f7021300290c.ngrok.io', '127.0.0.1']
 
 # Application definition
 
@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'rk_parser',
     'ckeditor',
     'ckeditor_uploader',
+    'contact',
 ]
 
 MIDDLEWARE = [
